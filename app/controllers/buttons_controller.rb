@@ -2,8 +2,8 @@ class ButtonsController < ApplicationController
   def show
     render :inline => <<-eot
       <%= form_tag :action => :press do %>
-        <%= submit_tag 'Hello', :name => :button %>
-        <%= submit_tag 'Goodbye', :name => :button %>
+        <%= content_tag :button, 'Hello', :name => :button, :value => 'Hello' %>
+        <%= content_tag :button, 'Goodbye', :name => :button, :value => 'Goodbye' %>
       <% end %>
     eot
   end
